@@ -194,4 +194,24 @@ html{scroll-behavior:smooth}
 </section>
 
 <footer><div class="wrap foot"><div><strong>한우리 독서토론논술 하남지부</strong><br>책으로 생각을 넓히고, 자기만의 문장으로 표현합니다.</div><div>상담문의 031-794-5519<br>수업형태 · 학원 / 독서교실 / 홈 수업 / 방문 수업</div></div></footer>
-</body></html>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuMap = {
+    '#classes': ['#classes'],
+    '#programs': ['#programs', '#program'],
+    '#teachers': ['#teachers', '#teacher'],
+    '#books': ['#books']
+  };
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (!menuMap[href]) return;
+
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      let target = null;
+      for (const selector of menuMap[href]) {
+        target = document.querySelector(selector);
+        if (target) break;
+      }</body></html>
